@@ -17,7 +17,7 @@ body {
 
 header {
     background-color: #f0f0f0;
-    padding: 10px;
+    padding: 10px;   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,8 @@ nav ul li a {
 }
 
 nav ul li.active a {
-    color: #ff5722;
+    color: #000;          
+    font-weight: bold; 
 }
 /* END REQUIREMENT 1 */
 
@@ -63,7 +64,8 @@ nav ul li.active a {
     box-sizing: border-box;
 }
 .reading-culture {
-    margin: 10px;
+    margin: 10px 0;
+  padding-left: 30px;
 }
 
 
@@ -269,7 +271,7 @@ footer {
     font-weight: bold;
 }
 
-/* REQUIREMENT 3 */
+
 .reading-culture {
     background-color: #f5f5f5;
     padding: 30px 40px;
@@ -310,4 +312,4 @@ footer {
 .reading-culture-content li {
     margin-bottom: 8px;
 }
-/* END REQUIREMENT 3 */
+
