@@ -6,7 +6,7 @@ searchButton.addEventListener('click', function () {
         alert('Please enter a book title or author');
     } else {
         alert('Searching for results...');
-        //  In a real application, you would perform the search here
+ 
     }
 });
 
@@ -17,11 +17,11 @@ const closeDetail = document.getElementById('close-detail');
 // Function to calculate total price
 function calculateTotalPrice() {
     const quantity = parseInt(quantityInput.value);
-    const price = parseFloat(pricePerBook.textContent.replace('$', '')); // Remove '$' sign
+    const price = parseFloat(pricePerBook.textContent.replace('$', '')); 
 
     if (!isNaN(quantity) && !isNaN(price)) {
         const total = quantity * price;
-        totalPriceDisplay.textContent = '$' + total.toFixed(2); // Format to 2 decimal places
+        totalPriceDisplay.textContent = '$' + total.toFixed(2); 
     } else {
         totalPriceDisplay.textContent = 'Invalid input';
     }
@@ -36,7 +36,7 @@ const totalPriceDisplay = document.getElementById('total-price');
 
 // Function to show book details
 function showBookDetail(event) {
-    const clickedBook = event.currentTarget; // Get the clicked book item
+    const clickedBook = event.currentTarget; 
 
     // Extract details from the clicked book item
     const imageSrc = clickedBook.querySelector('img').src;
@@ -55,7 +55,8 @@ function showBookDetail(event) {
     // Populate price per book in calculator
     //REQUIREMENT 4
     pricePerBook.textContent = price;
-
+totalPriceDisplay.textContent = "";
+    quantityInput.value = "";
     bookDetail.style.display = 'block'; // Show the detail section
 }
 
@@ -76,16 +77,3 @@ closeDetail.addEventListener('click', hideBookDetail);
 // Add event listener to the calculate button
 //REQUIREMENT 4
 calculateButton.addEventListener('click', calculateTotalPrice);
-
-// Function to calculate total price
-function calculateTotalPrice() {
-    const quantity = parseInt(quantityInput.value);
-    const price = parseFloat(pricePerBook.textContent.replace('$', '')); // Remove '$' sign
-
-    if (!isNaN(quantity) && !isNaN(price)) {
-        const total = quantity * price;
-        totalPriceDisplay.textContent = '$' + total.toFixed(2); // Format to 2 decimal places
-    } else {
-        totalPriceDisplay.textContent = 'Invalid input';
-    }
-}
